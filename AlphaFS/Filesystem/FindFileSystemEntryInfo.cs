@@ -161,7 +161,7 @@ namespace Alphaleonis.Win32.Filesystem
             return (T) (object) null;
 
 
-         var fullPathLp = (IsRelativePath ? OriginalInputPath + Path.DirectorySeparator : pathLp) + (!Utils.IsNullOrWhiteSpace(fileName) ? fileName : string.Empty);
+         var fullPathLp = (IsRelativePath ? OriginalInputPath + Path.DirectorySeparator : pathLp) + fileName;
 
          var fsei = new FileSystemEntryInfo(win32FindData) {FullPath = fullPathLp};
 
