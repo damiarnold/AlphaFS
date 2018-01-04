@@ -869,7 +869,7 @@ namespace Alphaleonis.Win32.Filesystem
          if (pathFormat == PathFormat.RelativePath)
             Path.CheckSupportedPathFormat(path, false, false);
 
-         var attributes = isFolder ? ExtendedFileAttributes.BackupSemantics : ExtendedFileAttributes.ReadOnly;
+         var attributes = ExtendedFileAttributes.BackupSemantics;
 
          if (modifyReparsePoint)
             attributes |= ExtendedFileAttributes.OpenReparsePoint;
